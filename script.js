@@ -1,83 +1,68 @@
-// ========================================
-// MENU DO SITE
-// ========================================
-
+// Menu mobile
 function abrirMenu() {
-    const menu = document.getElementById("menu");
-
-    if (menu.classList.contains("aberto")) {
-        menu.classList.remove("aberto");
-    } else {
-        menu.classList.add("aberto");
-    }
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("ativo");
 }
 
+// Contadores
+const contadores = {};
 
-// ========================================
-// FECHAR O MENU AO CLICAR EM UM LINK
-// ========================================
+function registrarVisualizacao(chave) {
+  if (!contadores[chave]) {
+    contadores[chave] = 0;
+  }
 
-const linksMenu = document.querySelectorAll("#menu a");
+  contadores[chave]++;
 
-linksMenu.forEach(function(link) {
+  return contadores[chave];
+}
 
-    link.addEventListener("click", function() {
+// Contador geral do site
+let visitasSite = Number(localStorage.getItem("dzk7_visitas")) || 0;
+visitasSite++;
 
-        const menu = document.getElementById("menu");
+localStorage.setItem("dzk7_visitas", visitasSite);
 
-        menu.classList.remove("aberto");
+const siteViews = document.getElementById("siteViews");
 
+if (siteViews) {
+  siteViews.textContent = visitasSite;
+}
+
+// Cards de mods
+document.querySelectorAll(".card").forEach((card) => {
+  const botao = card.querySelector(".abrir-card");
+  const contador = card.querySelector(".card-views");
+  const chave = card.dataset.counterKey;
+
+  if (botao) {
+    botao.addEventListener("click", () => {
+      const total = registrarVisualizacao(chave);
+      contador.textContent = total;
+
+      botao.textContent = "Visualizado ✓";
+
+      setTimeout(() => {
+        botao.textContent = "Visualizar";
+      }, 1200);
     });
-
+  }
 });
 
+// Itens da área de jogos
+document.querySelectorAll(".item").forEach((item) => {
+  const contador = item.querySelector("strong");
+  const chave = item.dataset.counterKey;
 
-// ========================================
-// ROLAGEM SUAVE
-// ========================================
-
-document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-
-    link.addEventListener("click", function(event) {
-
-        const destino = document.querySelector(
-            this.getAttribute("href")
-        );
-
-        if (destino) {
-
-            event.preventDefault();
-
-            destino.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        }
-
-    });
-
+  item.addEventListener("click", () => {
+    const total = registrarVisualizacao(chave);
+    contador.textContent = total;
+  });
 });
 
-
-// ========================================
-// ANIMAÇÃO DOS CARDS
-// ========================================
-
-const cards = document.querySelectorAll(".card");
-
-cards.forEach(function(card) {
-
-    card.addEventListener("click", function() {
-
-        card.classList.toggle("selecionado");
-
-    });
-
+// Fecha o menu ao clicar em um link
+document.querySelectorAll(".menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.getElementById("menu").classList.remove("ativo");
+  });
 });
-
-
-// ========================================
-// MENSAGEM NO CONSOLE
-// ========================================
-
-console.log("Site carregado com sucesso!");
