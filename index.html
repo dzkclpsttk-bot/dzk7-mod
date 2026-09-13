@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Portal</title>
+
+    <!-- O visual vai ficar no style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="topo">
+
+        <div class="logo">
+            <div class="logo-icon">🔥</div>
+            <span>MEU SITE</span>
+        </div>
+
+        <button class="menu-btn" onclick="abrirMenu()">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- MENU -->
+    <nav id="menu" class="menu">
+
+        <a href="#">Início</a>
+        <a href="#novidades">Novidades</a>
+        <a href="#destaques">Destaques</a>
+        <a href="#jogos">Jogos</a>
+
+    </nav>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="hero">
+
+            <span class="categoria">
+                ÚLTIMAS NOVIDADES
+            </span>
+
+            <h1>
+                MEU PORTAL: JOGOS,
+                VÍDEOS E NOVIDADES
+            </h1>
+
+            <p>
+                Um portal moderno, rápido e adaptado
+                para celular e computador.
+            </p>
+
+            <div class="botoes">
+
+                <a href="#videos" class="botao">
+                    Vídeos
+                </a>
+
+                <a href="#jogos" class="botao">
+                    Jogos
+                </a>
+
+                <a href="#destaques" class="botao">
+                    Destaques
+                </a>
+
+                <a href="#novidades" class="botao">
+                    Novidades
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- DESTAQUE -->
+        <section class="banner">
+
+            <div class="banner-conteudo">
+
+                <span class="tag">
+                    DESTAQUE
+                </span>
+
+                <div class="banner-imagem">
+                    <span>IMAGEM DE DESTAQUE</span>
+                </div>
+
+                <h2>
+                    Confira as novidades do portal
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- EM ALTA -->
+        <section id="destaques" class="secao">
+
+            <span class="pequeno-titulo">
+                AGORA
+            </span>
+
+            <h2>
+                EM ALTA
+            </h2>
+
+
+            <div class="cards">
+
+
+                <!-- CARD 1 -->
+                <article class="card">
+
+                    <div class="card-imagem">
+                        <span class="card-tag">
+                            NOVO
+                        </span>
+                    </div>
+
+                    <div class="card-conteudo">
+
+                        <h3>
+                            Novo conteúdo disponível
+                        </h3>
+
+                        <p class="estatisticas">
+                            👁️ 3.370 &nbsp; 👍 91 &nbsp; 👎 0
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 2 -->
+                <article class="card">
+
+                    <div class="card-imagem">
+                        <span class="card-tag">
+                            JOGO
+                        </span>
+                    </div>
+
+                    <div class="card-conteudo">
+
+                        <h3>
+                            Atualização nova disponível
+                        </h3>
+
+                        <p class="estatisticas">
+                            👁️ 1.763 &nbsp; 👍 13 &nbsp; 👎 0
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 3 -->
+                <article class="card">
+
+                    <div class="card-imagem">
+                        <span class="card-tag">
+                            NOVO
+                        </span>
+                    </div>
+
+                    <div class="card-conteudo">
+
+                        <h3>
+                            Confira esta novidade
+                        </h3>
+
+                        <p class="estatisticas">
+                            👁️ 1.517 &nbsp; 👍 24 &nbsp; 👎 0
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- JOGOS -->
+        <section id="jogos" class="secao">
+
+            <span class="pequeno-titulo">
+                PORTAL
+            </span>
+
+            <h2>
+                JOGOS
+            </h2>
+
+            <div class="lista">
+
+                <div class="item">
+                    <div class="item-icon">🎮</div>
+
+                    <div>
+                        <h3>Jogo em destaque</h3>
+                        <p>Confira os detalhes e novidades.</p>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="item-icon">🎮</div>
+
+                    <div>
+                        <h3>Nova atualização</h3>
+                        <p>Veja as novidades adicionadas.</p>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="item-icon">🎮</div>
+
+                    <div>
+                        <h3>Conteúdo recente</h3>
+                        <p>Confira o conteúdo mais recente.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VÍDEOS -->
+        <section id="videos" class="secao">
+
+            <span class="pequeno-titulo">
+                PORTAL
+            </span>
+
+            <h2>
+                VÍDEOS
+            </h2>
+
+            <div class="video-card">
+
+                <div class="video-placeholder">
+                    ▶
+                </div>
+
+                <h3>
+                    Vídeo em destaque
+                </h3>
+
+                <p>
+                    Adicione seus vídeos aqui posteriormente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOVIDADES -->
+        <section id="novidades" class="secao">
+
+            <span class="pequeno-titulo">
+                PORTAL
+            </span>
+
+            <h2>
+                NOVIDADES RECENTES
+            </h2>
+
+            <div class="noticia">
+
+                <h3>
+                    Bem-vindo ao novo portal
+                </h3>
+
+                <p>
+                    Aqui você poderá colocar suas notícias,
+                    atualizações e conteúdos.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            © 2026 Meu Portal
+        </p>
+
+        <p>
+            Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
